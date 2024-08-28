@@ -1,3 +1,4 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Piscilago Suite">
     <parameter name="browser" value="chrome" />
     <parameter name="linkMain" value="https://www.piscilago.co/" />
@@ -15,16 +16,14 @@
 
     <!-- Test for testNavBarPiscilago -->
     <test name="testNavBarPiscilago">
-        <parameter
-                name="textNavBar"
-                value="
-                    Planes y tarifas,
-                    Planea tu visita,
-                    Atracciones,
-                    Animales protegidos,
-                    Conservación ambiental,
-                    Eventos y noticias,
-                    Lagoon Fest" />
+        <parameter name="textNavBar"
+                   value="
+                       Planes y tarifas,
+                       Planea tu visita, Atracciones,
+                       Animales protegidos,
+                       Conservación ambiental,
+                       Eventos y noticias,
+                       Lagoon Fest" />
         <classes>
             <class name="piscilago.test.PiscilagoHomePageTest">
                 <methods>
@@ -49,7 +48,7 @@
     <!-- Test for testCelebrationSection -->
     <test name="testCelebrationSection">
         <parameter name="textTitleCelebration" value="Celebraciones especiales" />
-        <parameter name="textTitleCelebrationPage" value="Cotiza tu celebración"/>
+        <parameter name="textTitleCelebrationPage" value="Cotiza tu celebración" />
         <classes>
             <class name="piscilago.test.PiscilagoHomePageTest">
                 <methods>
@@ -60,25 +59,13 @@
     </test>
 
     <!-- Test for testWherePiscilagoSection -->
-    <test name="testWherePiscilagoSection">
-        <parameter name="textTitle" value="¿Cómo llegar a Piscilago?"/>
+    <test name="testWherePiscilagoSectionUnique">
+        <parameter name="textTitle" value="¿Cómo llegar a Piscilago?" />
         <parameter name="listTextTitle" value="
-                                        Ubicación,
-                                        Buses,
-                                        Transporte premium,
-                                        Llegar en transporte propio"/>
-        <classes>
-            <class name="piscilago.test.PiscilagoHomePageTest">
-                <methods>
-                    <include name="testWherePiscilagoSection" />
-                </methods>
-            </class>
-        </classes>
-    </test>
-
-    <!-- Test for testWherePiscilagoSection -->
-    <test name="testWherePiscilagoSection">
-        <parameter/>
+                                            Ubicación,
+                                            Buses,
+                                            Transporte premium,
+                                            Llegar en transporte propio" />
         <classes>
             <class name="piscilago.test.PiscilagoHomePageTest">
                 <methods>
