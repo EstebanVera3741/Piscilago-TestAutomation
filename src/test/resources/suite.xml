@@ -1,0 +1,90 @@
+<suite name="Piscilago Suite">
+    <parameter name="browser" value="chrome" />
+    <parameter name="linkMain" value="https://www.piscilago.co/" />
+
+    <!-- Test for testSearchPagePiscilago -->
+    <test name="testSearchPagePiscilago">
+        <classes>
+            <class name="piscilago.test.PiscilagoHomePageTest">
+                <methods>
+                    <include name="testSearchPagePiscilago" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <!-- Test for testNavBarPiscilago -->
+    <test name="testNavBarPiscilago">
+        <parameter
+                name="textNavBar"
+                value="
+                    Planes y tarifas,
+                    Planea tu visita,
+                    Atracciones,
+                    Animales protegidos,
+                    Conservación ambiental,
+                    Eventos y noticias,
+                    Lagoon Fest" />
+        <classes>
+            <class name="piscilago.test.PiscilagoHomePageTest">
+                <methods>
+                    <include name="testNavBarPiscilago" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <!-- Test for testViewOfferPiscilago -->
+    <test name="testViewOfferPiscilago">
+        <parameter name="textMessage" value="Conoce nuestros planes y tarifas Piscilago" />
+        <classes>
+            <class name="piscilago.test.PiscilagoHomePageTest">
+                <methods>
+                    <include name="testViewOfferPiscilago" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <!-- Test for testCelebrationSection -->
+    <test name="testCelebrationSection">
+        <parameter name="textTitleCelebration" value="Celebraciones especiales" />
+        <parameter name="textTitleCelebrationPage" value="Cotiza tu celebración"/>
+        <classes>
+            <class name="piscilago.test.PiscilagoHomePageTest">
+                <methods>
+                    <include name="testCelebrationSection" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <!-- Test for testWherePiscilagoSection -->
+    <test name="testWherePiscilagoSection">
+        <parameter name="textTitle" value="¿Cómo llegar a Piscilago?"/>
+        <parameter name="listTextTitle" value="
+                                        Ubicación,
+                                        Buses,
+                                        Transporte premium,
+                                        Llegar en transporte propio"/>
+        <classes>
+            <class name="piscilago.test.PiscilagoHomePageTest">
+                <methods>
+                    <include name="testWherePiscilagoSection" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <!-- Test for testWherePiscilagoSection -->
+    <test name="testWherePiscilagoSection">
+        <parameter/>
+        <classes>
+            <class name="piscilago.test.PiscilagoHomePageTest">
+                <methods>
+                    <include name="testWherePiscilagoSection" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
