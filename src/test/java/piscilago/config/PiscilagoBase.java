@@ -6,21 +6,23 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import piscilago.response.IPiscilagoResponse;
+import piscilago.utils.response.IPiscilagoResponse;
 
 import java.time.Duration;
-import java.util.List;
+import java.util.*;
 
 public class PiscilagoBase
 {
-    protected WebDriver webDriver;
-    protected WebDriverWait webDriverWait;
+    private final WebDriver webDriver;
+    private final WebDriverWait webDriverWait;
+    private final HashMap<String, String> listAllWindows;
 
     public PiscilagoBase(WebDriver webDriver)
     {
         this.webDriver = webDriver;
         PageFactory.initElements(webDriver, this);
         this.webDriverWait = new WebDriverWait(webDriver, Duration.ofSeconds(20));
+        this.listAllWindows = new HashMap<String, String>();
     }
 
     public WebDriver getWebDriver()
@@ -31,6 +33,33 @@ public class PiscilagoBase
     public WebDriverWait getWebDriverWait()
     {
         return this.webDriverWait;
+    }
+
+    public void serviceNavigateCorrectly(String link)
+    {
+        getWebDriver().get(link);
+    }
+
+    public void serviceAddWindow(String nameClass)
+    {
+        Set<String> windows = getWebDriver().getWindowHandles();
+        List<String> listWindows = new ArrayList<>(windows);
+
+        String lastElement = listWindows.getLast();
+
+        if (!this.listAllWindows.containsKey(nameClass)) {
+            this.listAllWindows.put(nameClass, lastElement);
+        }
+    }
+
+    public void serviceSelectWindow(String className)
+    {
+        if (listAllWindows.containsKey(className)) {
+            String valor = listAllWindows.get(className);
+            getWebDriver().switchTo().window(valor);
+        } else {
+            throw new RuntimeException(IPiscilagoResponse.PISCILAGO_FAIL_WINDOW + className);
+        }
     }
 
     public void waitElementVisibility(WebElement webElement)

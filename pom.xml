@@ -12,8 +12,7 @@
         <maven.compiler.source>22</maven.compiler.source>
         <maven.compiler.target>22</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <selenium-version>4.11.0</selenium-version>
-        <serenity-version>3.9.0</serenity-version>
+        <selenium-version>4.25.0</selenium-version>
         <testNG-version>7.10.2</testNG-version>
         <log4j-version>1.2.17</log4j-version>
         <loggin-log4j-version>2.20.0</loggin-log4j-version>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Piscilago Suite]" guice-stage="DEVELOPMENT">
+  <parameter name="browser" value="chrome"/>
+  <parameter name="linkMain" value="https://www.piscilago.co/"/>
+  <test thread-count="5" name="testSearchPagePiscilago(failed)">
+    <classes>
+      <class name="piscilago.test.PiscilagoHomePageTest">
+        <methods>
+          <include name="beforeMethod"/>
+          <include name="testSearchPagePiscilago"/>
+          <include name="afterMethod"/>
+        </methods>
+      </class> <!-- piscilago.test.PiscilagoHomePageTest -->
+    </classes>
+  </test> <!-- testSearchPagePiscilago(failed) -->
+  <test thread-count="5" name="testNavBarPiscilago(failed)">
+    <parameter name="textNavBar" value="                        Planes y tarifas,                        Planea tu visita, Atracciones,                        Animales protegidos,                        Conservación ambiental,                        Eventos y noticias,                        Lagoon Fest"/>
+    <classes>
+      <class name="piscilago.test.PiscilagoHomePageTest">
+        <methods>
+          <include name="beforeMethod"/>
+          <include name="testNavBarPiscilago"/>
+          <include name="afterMethod"/>
+        </methods>
+      </class> <!-- piscilago.test.PiscilagoHomePageTest -->
+    </classes>
+  </test> <!-- testNavBarPiscilago(failed) -->
+  <test thread-count="5" name="testViewOfferPiscilago(failed)">
+    <parameter name="textMessage" value="Conoce nuestros planes y tarifas Piscilago"/>
+    <classes>
+      <class name="piscilago.test.PiscilagoHomePageTest">
+        <methods>
+          <include name="beforeMethod"/>
+          <include name="testViewOfferPiscilago"/>
+          <include name="afterMethod"/>
+        </methods>
+      </class> <!-- piscilago.test.PiscilagoHomePageTest -->
+    </classes>
+  </test> <!-- testViewOfferPiscilago(failed) -->
+  <test thread-count="5" name="testCelebrationSection(failed)">
+    <parameter name="textTitleCelebrationPage" value="Cotiza tu celebración"/>
+    <parameter name="textTitleCelebration" value="Celebraciones especiales"/>
+    <classes>
+      <class name="piscilago.test.PiscilagoHomePageTest">
+        <methods>
+          <include name="beforeMethod"/>
+          <include name="testCelebrationSection"/>
+          <include name="afterMethod"/>
+        </methods>
+      </class> <!-- piscilago.test.PiscilagoHomePageTest -->
+    </classes>
+  </test> <!-- testCelebrationSection(failed) -->
+  <test thread-count="5" name="testWherePiscilagoSectionUnique(failed)">
+    <parameter name="textTitle" value="¿Cómo llegar a Piscilago?"/>
+    <parameter name="listTextTitle" value="                                             Ubicación,                                             Buses,                                             Transporte premium,                                             Llegar en transporte propio"/>
+    <classes>
+      <class name="piscilago.test.PiscilagoHomePageTest">
+        <methods>
+          <include name="beforeMethod"/>
+          <include name="testWherePiscilagoSection"/>
+          <include name="afterMethod"/>
+        </methods>
+      </class> <!-- piscilago.test.PiscilagoHomePageTest -->
+    </classes>
+  </test> <!-- testWherePiscilagoSectionUnique(failed) -->
+</suite> <!-- Failed suite [Piscilago Suite] -->

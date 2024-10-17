@@ -1,0 +1,16 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Piscilago Suite">
+    <parameter name="browser" value="chrome" />
+    <parameter name="linkMain" value="https://www.piscilago.co/" />
+
+    <!-- Test for PiscilagoBuyPlan -->
+    <test name="Validate the buy of plans and rates from Piscilago.">
+        <classes>
+            <class name="piscilago.test.PiscilagoBuyPlanTest">
+                <methods>
+                    <include name="testBuyPlan" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
